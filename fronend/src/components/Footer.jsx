@@ -11,14 +11,14 @@ const Footer = () => {
                 <li className="hover:text-gray-400 cursor-pointer">Buy a Car</li>
                 <li className="hover:text-gray-400 cursor-pointer">Contact Us</li>
                 <li className="text-sm mt-4">
-                    &copy; {currentYear} Created by{" "}
+                    &copy; {currentYear}{" "}
                     <a
                         href="https://www.teamtechz.co.za"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-white hover:text-gray-400"
                     >
-                        Makalapetlo Maropene of teamtechz
+                       TeamTechz IT Solutions
                     </a>
                 </li>
             </ul>

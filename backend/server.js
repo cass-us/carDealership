@@ -3,6 +3,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import { connectDB } from './config/db.js';
 import productRouter from './routes/product.routes.js';
+import {notFound , errorHandler} from "./middleware/errorMiddleware.js";
 import userRouter from './routes/user.routes.js';
 
 dotenv.config();
@@ -18,6 +19,10 @@ connectDB();
 
 app.use("/api/products", productRouter);
 app.use("/api/user", userRouter);
+
+app.use(notFound);
+app.use(errorHandler);
+app.use(express.urlencoded({extended:true}));
 
 console.log("Product Routes:", productRouter.stack.map(r => r.route.path));
 console.log("User Routes:", userRouter.stack.map(r => r.route.path));

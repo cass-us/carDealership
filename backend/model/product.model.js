@@ -45,14 +45,10 @@ const productSchema = new mongoose.Schema(
       min: 1, 
       max: 5,
     },
-    carType:{
+    typeor_model: {
       type: String, 
       required: true,
-    
     },
-    
-    model: {
-      
     drive_type: {
       type: String, 
       required: true,
